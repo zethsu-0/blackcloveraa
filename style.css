@@ -1,0 +1,132 @@
+body {
+  padding: 0;
+  margin: 0;
+  color: white;
+  background-color: black;
+  background-image: url(img/backg.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+header h1 {
+  text-align: center;
+  margin: 0;
+}
+
+main {
+  margin: 0 auto;
+  padding: 20px;
+  height: auto;
+  border: 2px solid white;
+  backdrop-filter: blur(20px);
+  width: 80%;
+  border-radius: 20px;
+}
+
+main img.upper {
+  filter: drop-shadow(0 0 10px white);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  max-width: 100%;
+}
+
+ul {
+  flex: 1;
+  justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+ul li {
+  margin: 10px;
+  border-radius: 10px;
+  border: 2px solid white;
+  background-color: black;
+  width: 250px;
+  height: 400px;
+  position: relative;
+}
+
+main ul img {
+  border-radius: 8px;
+  height: 100%;
+  width: 100%;
+}
+
+.profile {
+  height: 50%;
+}
+.before .profile {
+  border-bottom: 2px solid#171717;
+}
+.before .details {
+  background: linear-gradient(
+    0deg,
+    rgba(27, 27, 27, 1) 0%,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(27, 27, 27, 1) 100%
+  );
+}
+.details {
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.before,
+.after {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+.after {
+  opacity: 0;
+  visibility: hidden;
+  background: linear-gradient(
+    0deg,
+    rgb(23, 23, 23) 0%,
+    rgba(0, 0, 0, 1) 40%,
+    rgb(124, 124, 124) 100%
+  );
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 10px;
+}
+.after img {
+  transform: scale(1.5);
+  z-index: 2;
+}
+.after .details {
+  margin-bottom: 50px;
+}
+.after p {
+  font-size: 2em;
+}
+li:hover .before {
+  opacity: 0;
+  visibility: hidden;
+}
+
+li:hover .after {
+  opacity: 1;
+  visibility: visible;
+  z-index: 2;
+}
+
+p {
+  text-align: center;
+  margin: 0;
+  color: white;
+}
